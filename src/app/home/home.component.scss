@@ -1,0 +1,20 @@
+@import '../app.component.scss';
+
+p {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+
+  a.button {
+    display: inline-block;
+    background-color: #1976d2;
+    color: white;
+    padding: 16px 24px;
+    margin-top: 16px;
+    border-radius: 8px;
+
+    &:hover {
+      background-color: #125699;
+    }
+  }
+}

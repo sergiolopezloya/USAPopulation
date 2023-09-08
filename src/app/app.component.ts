@@ -8,7 +8,6 @@ import { Routes } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'USA Population Data';
   routes: Routes = [];
 
   constructor() {
