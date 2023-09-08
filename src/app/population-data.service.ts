@@ -11,7 +11,9 @@ export class PopulationDataService {
   constructor(private httpClient: HttpClient) { }
 
   getPopulationData(drilldown: PopulationDrillDown): Observable<any> {
-    const params = new HttpParams().set('drilldowns', drilldown).set('measures', 'Population');
+    const params = new HttpParams()
+      .set('drilldowns', drilldown)
+      .set('measures', 'Population');
 
     return this.httpClient.get(this.apiUrl, { params });
   }
