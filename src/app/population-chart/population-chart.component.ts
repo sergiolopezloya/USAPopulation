@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PopulationDataService } from '../population-data.service';
+import { PopulationDataService, PopulationDrillDown } from '../population-data.service';
 
 @Component({
   selector: 'app-population-chart',
@@ -9,8 +9,8 @@ import { PopulationDataService } from '../population-data.service';
 export class PopulationChartComponent implements OnInit {
   constructor(private populationDataService: PopulationDataService) {}
 
-  ngOnInit(): void {
-    this.populationDataService.getPopulationData('Nation').subscribe((data) => {
+  ngOnInit(drilldown: PopulationDrillDown = 'Nation'): void {
+    this.populationDataService.getPopulationData(drilldown).subscribe((data) => {
       console.log(data);
     });
   }

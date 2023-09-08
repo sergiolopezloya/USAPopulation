@@ -10,9 +10,11 @@ export class PopulationDataService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getPopulationData(drilldown: 'Nation' | 'State'): Observable<any> {
+  getPopulationData(drilldown: PopulationDrillDown): Observable<any> {
     const params = new HttpParams().set('drilldowns', drilldown).set('measures', 'Population');
 
     return this.httpClient.get(this.apiUrl, { params });
   }
 }
+
+export type PopulationDrillDown = 'Nation' | 'State';
