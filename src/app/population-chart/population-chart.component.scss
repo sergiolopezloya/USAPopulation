@@ -1,0 +1,11 @@
+@import '../app.component.scss';
+
+#chart-container {
+  min-width: 600px;
+}
+
+@media screen and (max-width: 575px) {
+  #chart-container {
+    min-width: 90vw;
+  }
+}
